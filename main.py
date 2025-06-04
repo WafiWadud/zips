@@ -1,4 +1,7 @@
 import tarfile
+import gi
+
+gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk, Gio
 
 
@@ -48,8 +51,8 @@ class ZipApp(Gtk.Window):
         dialog.destroy()
 
     def gzip_dir(self, input_dir, output_gz):
-        with tarfile.open(output_gz, 'w:gz') as tar:
-            tar.add(input_dir, arcname='')
+        with tarfile.open(output_gz, "w:gz") as tar:
+            tar.add(input_dir, arcname="")
 
 
 win = ZipApp()
