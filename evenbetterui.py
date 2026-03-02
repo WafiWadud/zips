@@ -176,4 +176,5 @@ with ui.card().classes("mx-auto max-w-2xl p-4 mt-4 bg-blue-50"):
         ui.label('• Click "Create GZip Archive" to compress all uploaded files')
         ui.label("• The archive will be saved in the same directory as this script")
 
-ui.run(native=True, reload=False)
+if __name__ == "__main__":
+    ui.run(native=True, reload=False)
